@@ -1,11 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://byns8w7vu8o8p"]
+[gd_scene load_steps=5 format=3 uid="uid://dqfwl0xclgx87"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1ei5"]
+[ext_resource type="Script" path="res://Player.gd" id="1_12nuu"]
+[ext_resource type="Texture2D" uid="uid://d13gbbl76x7n1" path="res://Character.png" id="1_an71l"]
 
-[node name="Player" type="Area2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4kwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_an71l")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_an71l")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwulf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="Area2D" parent="."]
+script = ExtResource("1_12nuu")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_g4kwp")
+animation = &"up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_t1ei5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_vwulf")
