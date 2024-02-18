@@ -1,5 +1,6 @@
 extends Node
 
+var simultaneous_scene = preload("res://menu/GameOverMenu.tscn").instantiate()
 var time = 0
 var rock_pos = PackedVector2Array()
 var shadow_x = 0
@@ -33,3 +34,7 @@ func _process(delta):
 				add_child(shadow)
 				break
 	time += 1
+	if Global.game_over == true:
+		Global.time = time
+		get_tree().root.add_child(simultaneous_scene)
+		get_node("/root/Main").free()

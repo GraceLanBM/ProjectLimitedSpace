@@ -29,4 +29,4 @@ func _on_visible_screen_notifer_2d_screen_exited():
 	"""
 
 func _on_player_hit():
-	pass
+	Global.game_over = true

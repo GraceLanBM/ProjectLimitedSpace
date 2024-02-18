@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://8edb7868nlrm"]
 
 [ext_resource type="Script" path="res://menu/StartMenu.gd" id="1_4aj18"]
-[ext_resource type="Texture2D" uid="uid://j5315gq8yb3k" path="res://images/Background.png" id="2_ara6x"]
+[ext_resource type="Texture2D" uid="uid://j5315gq8yb3k" path="res://menu/Background.png" id="2_ara6x"]
 [ext_resource type="Texture2D" uid="uid://bt2psofwndkj2" path="res://images/Character.png" id="3_pnp26"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_4aj18")
 
 [node name="Background" type="Sprite2D" parent="."]
