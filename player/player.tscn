@@ -15,8 +15,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ptc32"]
+height = 20.0
 
 [node name="Player" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_ol8j8")
 metadata/_edit_group_ = true
 
