@@ -1,33 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvkxwabls2hu1"]
+[gd_scene load_steps=5 format=3 uid="uid://dvkxwabls2hu1"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_1pgh2"]
 [ext_resource type="PackedScene" uid="uid://dqfwl0xclgx87" path="res://player.tscn" id="1_cjq46"]
 [ext_resource type="Script" path="res://TotalTimer.gd" id="2_funbm"]
-[ext_resource type="Script" path="res://Rock.gd" id="2_lx72y"]
-[ext_resource type="Texture2D" uid="uid://bc6256gco2jpm" path="res://Rock1.png" id="4_p72ug"]
-[ext_resource type="Texture2D" uid="uid://dvxxdd5yptel3" path="res://Rock1Shadow.png" id="4_vlyq7"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_y884e"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_p72ug")
-}],
-"loop": true,
-"name": &"Rock",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_vlyq7")
-}],
-"loop": true,
-"name": &"shadow",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_22fqa"]
+[ext_resource type="PackedScene" uid="uid://d3c3lvsn1k3y3" path="res://rock.tscn" id="3_trbkf"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_1pgh2")
 
 [node name="Player" parent="." instance=ExtResource("1_cjq46")]
 
@@ -46,15 +25,6 @@ script = ExtResource("2_funbm")
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(400, 350)
 
-[node name="Rock" type="RigidBody2D" parent="."]
-collision_mask = 0
-script = ExtResource("2_lx72y")
+[node name="Rock" parent="." instance=ExtResource("3_trbkf")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Rock"]
-sprite_frames = SubResource("SpriteFrames_y884e")
-animation = &"shadow"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock"]
-shape = SubResource("RectangleShape2D_22fqa")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Rock"]
+[node name="RockPosition" type="Marker2D" parent="."]
