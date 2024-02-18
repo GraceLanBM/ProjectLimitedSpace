@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	#Presses start button then loads main scene
 	get_tree().change_scene("res://path/to/main.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8edb7868nlrm"]
+[gd_scene load_steps=4 format=3 uid="uid://8edb7868nlrm"]
 
 [ext_resource type="Script" path="res://StartMenu.gd" id="1_4aj18"]
 [ext_resource type="Texture2D" uid="uid://bwxd0vesf0kfx" path="res://Background.png" id="2_ara6x"]
+[ext_resource type="Texture2D" uid="uid://p4bf5eyaka4n" path="res://Character.png" id="3_72ubf"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4aj18")
@@ -14,11 +15,28 @@ scale = Vector2(10.0688, 12.06)
 texture = ExtResource("2_ara6x")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 205.0
-offset_top = 253.0
-offset_right = 542.0
-offset_bottom = 358.0
+offset_left = 225.0
+offset_top = 425.0
+offset_right = 562.0
+offset_bottom = 530.0
 text = "Start
 "
+
+[node name="Character" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(397, 270)
+scale = Vector2(18.0781, 15.7969)
+texture = ExtResource("3_72ubf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 60.0
+offset_right = 735.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_font_sizes/font_size = 100
+text = "DANGER 
+ FROM ABOVE"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

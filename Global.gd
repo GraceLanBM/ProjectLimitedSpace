@@ -1,12 +1,8 @@
 extends Node
+#Global variables for updating between the game and the Gameover scenes
+# Boolean to update true when player dies
 var game_over = false
+#updates from timer script
 var time
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#needs to update the score when player dies to show up on game over
+var score

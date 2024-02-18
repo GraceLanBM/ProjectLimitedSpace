@@ -1,6 +1,7 @@
 extends Label
 var time = 0
 
+#timer takes the time counted in _process and then converts into minutes, seconds and milliseconds
 func _format_seconds(time : float, use_milliseconds : bool) -> String:
 	var minutes := time / 60
 	var seconds := fmod(time, 60)
@@ -18,6 +19,7 @@ func get_time():
 func _process(delta: float) -> void:
 	time += delta
 	text = get_time()
+	#When global game over value is updated to true, global time var is updated to current time
 	if Global.game_over:
 		Global.time = get_time()
 
