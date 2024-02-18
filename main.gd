@@ -35,6 +35,6 @@ func _process(delta):
 				break
 	time += 1
 	if Global.game_over == true:
-		Global.time = time
+		Global.time = $TotalTimer.get_time()
 		get_tree().root.add_child(simultaneous_scene)
 		get_node("/root/Main").free()
