@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvkxwabls2hu1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1pgh2"]
-[ext_resource type="PackedScene" uid="uid://bjlu6bix8y35g" path="res://player/player.tscn" id="1_cjq46"]
+[ext_resource type="PackedScene" uid="uid://rouhfei2s8lk" path="res://player/player.tscn" id="1_cjq46"]
 [ext_resource type="Script" path="res://menu/TotalTimer.gd" id="2_funbm"]
 [ext_resource type="PackedScene" uid="uid://d3c3lvsn1k3y3" path="res://rock/rock.tscn" id="3_trbkf"]
 

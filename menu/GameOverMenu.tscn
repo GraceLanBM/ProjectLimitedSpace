@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menu/GameoverLabel.gd" id="1_hivk2"]
 [ext_resource type="Script" path="res://menu/Score.gd" id="2_ih6v7"]
-[ext_resource type="Texture2D" uid="uid://j5315gq8yb3k" path="res://menu/Background.png" id="3_joi68"]
+[ext_resource type="Texture2D" uid="uid://j5315gq8yb3k" path="res://images/Background.png" id="3_joi68"]
 [ext_resource type="Texture2D" uid="uid://bt2psofwndkj2" path="res://images/Character.png" id="3_wy4s6"]
 
 [node name="Node2D" type="Node2D"]

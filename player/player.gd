@@ -30,7 +30,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	hide()
+	#hide()
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
 

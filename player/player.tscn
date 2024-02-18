@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bt2psofwndkj2" path="res://images/Character.png" id="1_6ta5d"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_ol8j8"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_4rcxr"]
 animations = [{
 "frames": [{

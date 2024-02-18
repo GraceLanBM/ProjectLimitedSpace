@@ -4,7 +4,7 @@ var rock_img = preload("res://images/Rock1.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rock_img = preload("res://images/Rock1Shadow.png")
+	rock_img = preload("res://images/Rock1.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
