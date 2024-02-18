@@ -33,9 +33,9 @@ scale = Vector2(14.4375, 12.3594)
 texture = ExtResource("3_wy4s6")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 160.0
+offset_left = 62.0
 offset_top = 343.0
-offset_right = 649.0
+offset_right = 717.0
 offset_bottom = 457.0
 theme_override_colors/font_color = Color(0.207843, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
