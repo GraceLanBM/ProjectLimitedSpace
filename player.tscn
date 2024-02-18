@@ -22,7 +22,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwulf"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8y1qc"]
 
 [node name="Player" type="Area2D"]
 position = Vector2(391, 315)
@@ -34,4 +34,6 @@ sprite_frames = SubResource("SpriteFrames_g4kwp")
 animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_vwulf")
+shape = SubResource("CircleShape2D_8y1qc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
