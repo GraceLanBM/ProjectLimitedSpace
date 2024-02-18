@@ -15,7 +15,7 @@ func _ready():
 func _process(delta):
 	print("time=", time)
 	if time % 100 == 0:
-		var shadow = preload("res://rock.tscn").instantiate()
+		var shadow = preload("res://rock/rock.tscn").instantiate()
 		while true:
 			# generate new rock position
 			shadow_x = randi_range(0, 750)
