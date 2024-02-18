@@ -5,4 +5,8 @@ var game_over = false
 #updates from timer script
 var time
 #needs to update the score when player dies to show up on game over
-#var score = 0
+var score = 0
+
+#var collision_point
+
+#var rock_instance_position

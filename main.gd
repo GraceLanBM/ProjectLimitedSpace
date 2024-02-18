@@ -43,3 +43,8 @@ func _process(delta):
 		get_tree().root.add_child(simultaneous_scene)
 		get_node("/root/Main").free()
 		
+#func rock_instance_position():
+	#if get_child == Vector2(Global.collision):
+		#queue_free
+		
+		

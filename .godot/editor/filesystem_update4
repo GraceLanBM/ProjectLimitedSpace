@@ -1,6 +1,7 @@
 res://rock/rock.tscn
+res://menu/GameOverMenu.gd
 res://menu/timer.tscn
 res://menu/StartMenu.tscn
-res://menu/GameOverMenu.tscn
 res://main.tscn
 res://player/player.tscn
+res://menu/GameOverMenu.tscn

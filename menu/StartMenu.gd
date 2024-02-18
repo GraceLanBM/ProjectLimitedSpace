@@ -14,3 +14,5 @@ func _process(delta):
 func _on_button_pressed():
 	get_tree().root.add_child(simultaneous_scene)
 	hide()
+	
+	
