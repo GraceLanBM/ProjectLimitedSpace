@@ -26,5 +26,3 @@ script = ExtResource("2_funbm")
 position = Vector2(400, 350)
 
 [node name="Rock" parent="." instance=ExtResource("3_trbkf")]
-
-[node name="RockPosition" type="Marker2D" parent="."]

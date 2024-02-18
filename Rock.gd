@@ -1,15 +1,10 @@
 extends RigidBody2D
 
-#var time = 0
-#var rock_pos = PackedVector2Array()
+var rock_img = preload("res://Rock1.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	"""
-	var rock_img = $AnimatedSprite2D.sprite_frames.get_animation_names()
-	$AnimatedSprite2D.play(rock_img[0])
-	"""
-	pass
+	rock_img = preload("res://Rock1Shadow.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
