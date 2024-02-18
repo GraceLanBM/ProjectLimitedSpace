@@ -1,19 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvkxwabls2hu1"]
+[gd_scene load_steps=5 format=3 uid="uid://dvkxwabls2hu1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1pgh2"]
 [ext_resource type="PackedScene" uid="uid://rouhfei2s8lk" path="res://player/player.tscn" id="1_cjq46"]
-[ext_resource type="Texture2D" uid="uid://j5315gq8yb3k" path="res://images/Background.png" id="2_86254"]
 [ext_resource type="Script" path="res://menu/TotalTimer.gd" id="2_funbm"]
 [ext_resource type="PackedScene" uid="uid://d3c3lvsn1k3y3" path="res://rock/rock.tscn" id="3_trbkf"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_1pgh2")
-
-[node name="Background" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(399, 304.5)
-scale = Vector2(9.95, 12.06)
-texture = ExtResource("2_86254")
 
 [node name="Player" parent="." instance=ExtResource("1_cjq46")]
 
@@ -33,3 +26,5 @@ script = ExtResource("2_funbm")
 position = Vector2(400, 350)
 
 [node name="Rock" parent="." instance=ExtResource("3_trbkf")]
+
+[connection signal="hit" from="Player" to="Rock" method="_on_player_hit"]

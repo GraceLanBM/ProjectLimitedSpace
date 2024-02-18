@@ -20,8 +20,8 @@ func _process(delta):
 		var shadow = preload("res://rock/rock.tscn").instantiate()
 		while true:
 			# generate new rock position
-			shadow_x = randi_range(0, 750)
-			shadow_y = randi_range(100, 550)
+			shadow_x = randi_range(0, 20) * 40
+			shadow_y = randi_range(0, 13) * 40 + 100
 			# debug info
 			print("x=", shadow_x, "y=", shadow_y)
 			# check if the position not has a rock
