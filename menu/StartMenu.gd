@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var simultaneous_scene = preload("res://main.tscn").instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	#Presses start button then loads main scene
-	get_tree().change_scene("res://main.tscn")
+	get_tree().root.add_child(simultaneous_scene)
+	hide()

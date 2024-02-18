@@ -6,3 +6,4 @@ res://menu/GameOverMenu.tscn
 res://main.tscn
 res://rock/Rock.gd
 res://player/player.gd
+res://menu/StartMenu.gd
