@@ -4,7 +4,3 @@ res://menu/StartMenu.tscn
 res://menu/GameOverMenu.tscn
 res://main.tscn
 res://player/player.tscn
-res://rock/Rock.gd
-res://main.gd
-res://player/player.gd
-res://menu/Score.gd

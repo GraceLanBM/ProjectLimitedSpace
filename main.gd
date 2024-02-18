@@ -33,8 +33,10 @@ func _process(delta):
 				rock_pos.append(Vector2(shadow_x, shadow_y))	
 				add_child(shadow)
 				break
+		
 	time += 1
 	if Global.game_over == true:
 		Global.time = $TotalTimer.get_time()
 		get_tree().root.add_child(simultaneous_scene)
 		get_node("/root/Main").free()
+
