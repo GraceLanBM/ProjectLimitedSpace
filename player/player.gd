@@ -27,10 +27,10 @@ func _process(delta):
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
-
-
+	
 func _on_body_entered(body):
-	#hide()
+	hide()
+	print("hit")
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
 
@@ -38,4 +38,4 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
-	
+
