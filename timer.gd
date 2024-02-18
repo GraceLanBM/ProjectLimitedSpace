@@ -18,5 +18,7 @@ func get_time():
 func _process(delta: float) -> void:
 	time += delta
 	text = get_time()
+	if Global.game_over:
+		Global.time = get_time()
 
 	
