@@ -15,6 +15,9 @@ func _format_seconds(time : float, use_milliseconds : bool) -> String:
 func get_time():
 	return _format_seconds(time,true)
 	
+func get_seconds():
+	return time /3600
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time += delta
