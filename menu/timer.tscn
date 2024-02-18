@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8jh1ja5i21vy"]
 
-[ext_resource type="Script" path="res://TotalTimer.gd" id="1_3cqjh"]
+[ext_resource type="Script" path="res://menu/TotalTimer.gd" id="1_3cqjh"]
 
 [node name="timer" type="Label"]
 offset_left = 68.0
