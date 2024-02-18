@@ -3,6 +3,7 @@ signal hit
 
 @export var speed = 100  #(pixels/sec)
 var screen_size
+#var player_img = preload("res://images/up.png")
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -11,19 +12,26 @@ func _process(delta):
 	var velocity = Vector2.ZERO #The player's movement vector???
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
+		$AnimatedSprite2D.animation = "right"
+		
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
+		$AnimatedSprite2D.animation = "left"
+		
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+		$AnimatedSprite2D.animation = "up"
+		
 	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
+		$AnimatedSprite2D.animation = "down"
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
 	else:
 		velocity = Vector2.ZERO
-		#$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.stop()
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
