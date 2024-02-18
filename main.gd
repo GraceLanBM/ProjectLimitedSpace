@@ -6,6 +6,7 @@ var rock_pos = PackedVector2Array()
 var shadow_x = 0
 var shadow_y = 0
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	time = $TotalTimer.time
@@ -35,8 +36,10 @@ func _process(delta):
 				break
 		
 	time += 1
+	
 	if Global.game_over == true:
+		#Global.score = score
 		Global.time = $TotalTimer.get_time()
 		get_tree().root.add_child(simultaneous_scene)
 		get_node("/root/Main").free()
-
+		

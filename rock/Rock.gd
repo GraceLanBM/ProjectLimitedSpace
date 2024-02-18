@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 var rock_img = preload("res://images/Rock1.png")
+#var clicking
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,7 +28,18 @@ func _process(delta):
 func _on_visible_screen_notifer_2d_screen_exited():
 	queue_free()
 	"""
-
+#func _unhandled_input(event):
+	#if event.is_action_pressed('Click'):
+		#clicking = true
+		#if _on_mouse_entered():
+			#Global.score += 1
+			#queue_free()
+			
+		
 func _on_player_hit():
 	Global.game_over = true
 
+
+
+#func _on_mouse_entered():
+	#return true
