@@ -5,4 +5,4 @@ var game_over = false
 #updates from timer script
 var time
 #needs to update the score when player dies to show up on game over
-var score
+#var score = 0
