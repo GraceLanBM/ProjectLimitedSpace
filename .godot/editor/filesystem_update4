@@ -7,3 +7,4 @@ res://main.tscn
 res://rock/Rock.gd
 res://player/player.gd
 res://menu/StartMenu.gd
+res://menu/Score.gd
