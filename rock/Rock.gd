@@ -27,3 +27,6 @@ func _process(delta):
 func _on_visible_screen_notifer_2d_screen_exited():
 	queue_free()
 	"""
+
+func _on_player_hit():
+	pass
