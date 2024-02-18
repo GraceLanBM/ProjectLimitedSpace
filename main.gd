@@ -2,18 +2,20 @@ extends Node
 
 var time = 0
 var rock_pos = PackedVector2Array()
-var shadow_x
-var shadow_y
+var shadow_x = 0
+var shadow_y = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	time = $TotalTimer.time
+	$Player.start($StartPosition.position)
+	$StartTimer.start()
 	#var player = preload("res://player.tscn").instance()
 	#player.position = Vector2(400, 350)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print("time=", time)
+	#print("time=", time)
 	if time % 100 == 0:
 		var shadow = preload("res://rock/rock.tscn").instantiate()
 		while true:
@@ -25,6 +27,7 @@ func _process(delta):
 			# check if the position not has a rock
 			if not rock_pos.has(Vector2(shadow_x, shadow_y)):
 				# set the shadow to new position
+				print("set new pos")
 				shadow.position = Vector2(shadow_x, shadow_y)	
 				rock_pos.append(Vector2(shadow_x, shadow_y))	
 				add_child(shadow)
