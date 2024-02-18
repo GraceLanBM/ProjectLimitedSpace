@@ -33,5 +33,6 @@ script = ExtResource("2_funbm")
 position = Vector2(400, 350)
 
 [node name="Rock" parent="." instance=ExtResource("3_trbkf")]
+position = Vector2(-20, -20)
 
 [connection signal="hit" from="Player" to="Rock" method="_on_player_hit"]
