@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3c3lvsn1k3y3"]
 
 [ext_resource type="Script" path="res://rock/Rock.gd" id="1_jxktj"]
-[ext_resource type="Texture2D" uid="uid://dm21tkwuxnh8c" path="res://images/Rock1.png" id="2_rs817"]
-[ext_resource type="Texture2D" uid="uid://bt5tylohqwjrp" path="res://images/Rock1Shadow.png" id="3_h2n2t"]
+[ext_resource type="Texture2D" uid="uid://dm21tkwuxnh8c" path="res://images/Rock1.png" id="2_08uif"]
+[ext_resource type="Texture2D" uid="uid://bt5tylohqwjrp" path="res://images/Rock1Shadow.png" id="3_5dxjm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y884e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rs817")
+"texture": ExtResource("2_08uif")
 }],
 "loop": true,
 "name": &"Rock",
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_h2n2t")
+"texture": ExtResource("3_5dxjm")
 }],
 "loop": true,
 "name": &"Shadow",
@@ -26,15 +26,20 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22fqa"]
 
 [node name="Rock" type="RigidBody2D"]
+position = Vector2(-20, -20)
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_jxktj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_y884e")
 animation = &"Rock"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_22fqa")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(2, 2)
